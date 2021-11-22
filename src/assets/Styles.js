@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
+import Delete from "./images/delete.png"
+
+
 export const Box = styled.div`
 display: flex;
-flex-direction: row;
-align-items: flex-start;
-justify-content: space-around;
+justify-content: space-evenly;
 background-color: #FFF;
 box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
 text-align: center;
@@ -15,7 +16,8 @@ margin: 10px
 
 export const H2 = styled.h2`
     display: inline-flex;
-    align-items: flex-start;
+    align-items: start;
+    width: 145px;
     color: #000;
     font-size: 20px;
     font-weight: 500;
@@ -29,6 +31,19 @@ margin: 16px;
 padding: 4px 16px;
 border: 2px solid grey;
 border-radius: 3px;
+font-weight: bold
+`
+
+export const DeleteButtons = styled.button`
+background-color: #e33e32;
+font-size: 16px;
+font-type: bold;
+margin: 16px;
+width: 139px;
+padding: 4px 16px;
+border: 2px solid grey;
+border-radius: 3px;
+font-weight: bold
 `
 
 export const Input = styled.input`
@@ -41,6 +56,9 @@ border-radius: 3px;
 `;
 
 export const Wrapper = styled.section`
+display: flex;
+flex-direction: column;
+align-items: center;
 padding: 64px;
 background: #FFEFD5;
 border-bottom: 10px solid #FFF;
