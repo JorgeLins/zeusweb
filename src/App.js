@@ -1,21 +1,8 @@
-import React from "react";
-import SpendingList from "./components/ListComponent/SpendingList";
-import SpendingForm from "./components/FormsComponent/index.jsx";
+import React from 'react';
+import Routes from "./routes";
 
-import './assets/App.css'
-
-function App() {
-  
-  return(
-    <section>
-
-      <section>
-        <SpendingForm/>
-      </section>
-
-      <SpendingList/>
-    </section>
-    )
+export default function App() {
+   return (
+       <Routes/>
+   );
 }
-
-export default App;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import api from "../../api";
-import { Box, H2, DeleteButtons} from "../../assets/Styles"
+import api from "../../services/api";
+import { Box, H2, DeleteButtons, InvButton, EditButton} from "../../assets/Styles"
+import { FaRegTrashAlt, FaEdit } from "react-icons/fa";
 
 function SpendingList(){
 
@@ -43,7 +44,10 @@ function SpendingList(){
                 <H2>Ração</H2>
                  <H2>Preço(R$)</H2>
                 <H2>Quantidade(KG)</H2>
-                <DeleteButtons onClick={deleteAllSpending}>Deletar todos</DeleteButtons>
+                <div>
+                    <DeleteButtons onClick={deleteAllSpending}><FaRegTrashAlt/></DeleteButtons>
+                    <InvButton > </InvButton>
+                </div>
             </Box>  
             {price.map((price, key) => {
                 return(
@@ -52,7 +56,11 @@ function SpendingList(){
                          <H2>{price.price}</H2>
                         <H2>{price.quantity}</H2>
                         {/* <H2>{price.createdAt}</H2> */}
-                        <DeleteButtons onClick={() => deleteSpending(price._id)} >Deletar</DeleteButtons>
+                        <div>
+                            <DeleteButtons onClick={() => deleteSpending(price._id)} ><FaRegTrashAlt/></DeleteButtons>
+                            <EditButton onClick= {() => window.location.href = `/update/${price._id}`}><FaEdit/></EditButton>
+                        </div>
+                            
                     </Box>  
                 )
             })}
