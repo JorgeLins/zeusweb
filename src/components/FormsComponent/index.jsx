@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import api from "../../services/api";
 import { Wrapper, Input } from "../../assets/Styles"
-import { Buttons, Div, Label } from "../../assets/Styles"
+import { Buttons, Div, Label, Tittle } from "../../assets/Styles"
+import { FaAngleRight } from "react-icons/fa";
 
 function SpendingForm() {
 
@@ -38,25 +39,26 @@ function SpendingForm() {
 
    return (
       <Wrapper>
+            <Label>Adicione aqui a ração do seu pet</Label>
             <Div>
-               <Label>Nome da ração</Label>
+               <Tittle>Nome da ração</Tittle>
                <Input placeholder='Digite o nome da ração' onChange= {(event)=>{
                   setData({...data, name: event.target.value})
                }}></Input>
                <Div>
-               <Label>Preço(R$)</Label>
+               <Tittle>Preço(R$)</Tittle>
                   <Input placeholder='Digite o preço em reais' onChange= {(event)=>{
                   setData({...data, price: event.target.value})
                }}></Input>
                   <Div>
-                  <Label>Quantidade(KG)</Label>
+                  <Tittle>Quantidade(KG)</Tittle>
                      <Input placeholder='Digite a quantidade em kilos' onChange= {(event)=>{
                   setData({...data, quantity: event.target.value})
                }}></Input>
                   </Div>
                </Div>
             </Div>
-            <Buttons onClick={post}>Enviar</Buttons>
+            <Buttons onClick={post}>Enviar   <FaAngleRight/></Buttons>
             {/* <Buttons onClick={deleteSpending}>Deletar todos</Buttons> */}
       </Wrapper>
    )
