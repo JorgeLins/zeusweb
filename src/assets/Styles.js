@@ -62,12 +62,15 @@ export const Wh2 = styled.h2`
     margin-left: 60px;
 `
 
-export const P = styled.p`
+export const Text = styled.h4`
     color: #004242;
-    font-size: 12px;
-    font-family:  Roboto;
-    font-weight: medium;
-    margin-left: 60px;
+    text-align: center;
+    font: normal normal medium 24px/32px Roboto;
+    /* font-family:  Roboto;
+    font-weight: medium; */
+    width: 800px;
+    margin-left: 300px;
+    margin-right: 300px;
 `
 
 
@@ -77,7 +80,6 @@ color: white;
 background-color:#707070;
 align-items: center;
 font-size: 16px;
-font-type: bold;
 margin: 16px;
 margin-left: 218px;
 width: 100px;
@@ -101,7 +103,6 @@ opacity: 1;
 export const EditButton = styled.button`
 color: black;
 font-size: 16px;
-font-type: bold;
 margin: 16px;
 width: 60px;
 padding: 4px 16px;
@@ -113,7 +114,6 @@ font-weight: bold
 export const InvButton = styled.button`
 background-color: #FFC107;
 font-size: 16px;
-font-type: bold;
 margin: 16px;
 width: 60px;
 padding: 4px 16px;
@@ -123,15 +123,15 @@ font-weight: bold
 `
 
 export const DeleteButtons = styled.button`
-background-color: #FFF;
+background-color: #FFC107;
 font-size: 16px;
-margin: 16px;
-width: 60px;
-padding: 4px 16px;
+margin: 24px;
+margin-left: 350px;
 border: 2px solid #FFC107;
 border-radius: 3px;
-font-weight: bold
+font-weight: bold;
 text-align: center;
+cursor: pointer;
 `
 
 export const Input = styled.input`
@@ -147,41 +147,41 @@ border-radius: 3px;
 
 export const Wrapper = styled.section`
 display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-between;
-`;
-
-export const Bg = styled.section`
- background-color: #FFF;
-`;
-
-export const Section = styled.section`
-display: flex;
-align-items: flex-start;
-margin-top: 84px;
-margin-left: 60px;
-width: 336px;
-height: 319px;
+flex-direction: column;
+height: 310px;
 background: #9CCC65 0% 0% no-repeat padding-box;
 box-shadow: 0px 6px 12px #00000029;
 border-radius: 10px;
 opacity: 1;
 `;
 
+export const Bg = styled.section`
+align-items: center;
+`;
+
+export const Section = styled.section`
+    display: flex;
+    gap: 20px;
+    margin-top: 84px;
+    margin-left: 60px;
+`;
+
 export const Div = styled.div`
-display: flex;
-flex-direction: column;
-align-items: start;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 `;
 
 
-export const Divs = styled.div`
-margin-left:24px
+export const DivLabel = styled.div`
+    margin-left:24px
 `;
 
 export const Container = styled.div`
-max-height: 200px;
+    height: 380px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
 `;
 
 export const Label = styled.label`

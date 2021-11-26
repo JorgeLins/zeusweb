@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import api from "../../services/api";
-import { Box, H2, DeleteButtons, Description, Label, Div, Divs, Container, Wrapper} from "../../assets/Styles"
+import { Box, H2, DeleteButtons, Description, Label, Div, DivLabel, Container, Wrapper} from "../../assets/Styles"
 import { FaRegTrashAlt, FaAngleRight } from "react-icons/fa";
 
 function SpendingList(){
@@ -39,34 +39,39 @@ function SpendingList(){
 
 
     return(
-        <Container>
-            <Divs>
-            <Label>Histórico de rações</Label>
-            </Divs>
-            <Box >
+        <div>
+            <DivLabel>
+                <Label>Histórico de rações</Label>
+            </DivLabel>
+            <Container>
+            <Box>
                 <Div> 
-                    <Wrapper> 
+                    <div> 
                         <H2>Ração</H2>  
                         <H2>Data</H2>
-                    </Wrapper>
-                    <Wrapper> 
+                    </div>
+                    <div> 
                     <Description>Preço(R$)</Description>
                     <Description>Quantidade(KG)</Description>
-                    </Wrapper>
+                    </div>
                 </Div>
-                <Container>
+                <div>
                     <DeleteButtons onClick={deleteAllSpending}><FaRegTrashAlt/></DeleteButtons>
-                </Container>
+                </div>
             </Box>  
             {price.map((price, key) => {
                 return(
                     <Box key={key}>
-                        <H2>{price.name}</H2>
-                        <div>
-                         <H2>{price.price}</H2>
-                        <H2>{price.quantity}</H2>
-                        </div>
+                    <Div> 
+                    <div> 
+                        <H2>{price.name}</H2>  
                         <H2>{price.createdAt}</H2>
+                    </div>
+                    <div> 
+                    <Description>R$ {price.price}</Description>
+                    <Description>{price.quantity}KG</Description>
+                    </div>
+                </Div>
                         <div>
                             <DeleteButtons onClick={() => deleteSpending(price._id)} ><FaRegTrashAlt/></DeleteButtons>
                         </div>
@@ -74,7 +79,8 @@ function SpendingList(){
                     </Box>  
                 )
             })}
-        </Container>
+            </Container>
+        </div>
     )
         
 
