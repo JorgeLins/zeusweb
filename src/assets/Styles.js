@@ -1,14 +1,15 @@
 import styled from "styled-components";
+import 'typeface-roboto'
 
 
 
 export const Box = styled.div`
 display: flex;
-justify-content: space-evenly;
+justify-content: space-around;
 background-color: #FFC107;
 box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
 text-align: center;
-width:790px;
+width:700px;
 border-radius: 5px;
 padding: 5px 44px;
 margin: 10px 32px;
@@ -21,7 +22,19 @@ export const H2 = styled.h2`
     width: 145px;
     color: #004242;
     font-size: 12px;
-    font-weight: 500;
+    font-family:  Roboto;
+    font-weight: medium;
+    text-decoration: none;
+`
+
+export const Description = styled.h2`
+    display: inline-flex;
+    align-items: start;
+    width: 145px;
+    color: #004242;
+    font-family:  Roboto;
+    font-size: 12px;
+    font-weight: lighter;
     text-decoration: none;
 `
 
@@ -32,7 +45,8 @@ export const Tittle = styled.h2`
     color: #004242;
     margin-left:8px;
     font-size: 12px;
-    font-weight: 500;
+    font-family:  Roboto;
+    font-weight: medium;
     text-decoration: none;
     font-weight: bold;
 `
@@ -42,15 +56,17 @@ export const Wh2 = styled.h2`
     align-items: center;
     color: #004242;
     font-size: 20px;
-    font-weight: 500;
+    font-family:  Roboto;
+    font-weight: medium;
     text-decoration: none;
     margin-left: 60px;
 `
 
 export const P = styled.p`
-    text-color: #004242;
+    color: #004242;
     font-size: 12px;
-    text-decoration: none;
+    font-family:  Roboto;
+    font-weight: medium;
     margin-left: 60px;
 `
 
@@ -107,9 +123,8 @@ font-weight: bold
 `
 
 export const DeleteButtons = styled.button`
-background-color: #FFC107;
+background-color: #FFF;
 font-size: 16px;
-font-type: bold;
 margin: 16px;
 width: 60px;
 padding: 4px 16px;
@@ -133,7 +148,8 @@ border-radius: 3px;
 export const Wrapper = styled.section`
 display: flex;
 flex-direction: row;
-flex-wrap: wrap
+flex-wrap: wrap;
+justify-content: space-between;
 `;
 
 export const Bg = styled.section`

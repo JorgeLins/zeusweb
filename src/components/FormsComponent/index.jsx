@@ -4,6 +4,7 @@ import { Wrapper, Input } from "../../assets/Styles"
 import { Buttons, Div, Label, Tittle } from "../../assets/Styles"
 import { FaAngleRight } from "react-icons/fa";
 
+
 function SpendingForm() {
 
    function refreshPage() {
